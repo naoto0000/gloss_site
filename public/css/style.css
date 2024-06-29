@@ -1,0 +1,255 @@
+/* 共通部分 */
+li {
+    list-style: none;
+}
+
+body,
+p,
+ul,
+td,
+th,
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/* header */
+/* ====== */
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 60px;
+    border-bottom: solid 1px gray;
+}
+
+.header_h1 {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.fa-calendar {
+    font-size: 30px;
+    margin: 35px 50px;
+    color: black;
+}
+
+.fa-phone-flip {
+    font-size: 23px;
+    color: black;
+}
+
+.fa-user {
+    font-size: 23px;
+    margin-right: 50px;
+    color: black;
+}
+
+/* front_top */
+/* ========== */
+
+/* main_img */
+.top_main_img {
+    text-align: center;
+    margin: 60px;
+}
+
+.top_main_img img {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+}
+
+/* main_contents */
+.top_main_contents {
+    display: flex;
+}
+
+/* sidebar */
+.top_sidebar {
+    width: 30%;
+    padding-left: 60px;
+}
+
+.top_business_hours_title {
+    margin-bottom: 20px;
+}
+
+.business_hours_date {
+    padding-right: 10px;
+}
+
+.top_address_title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.top_news_title {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#news_display {
+    height: 140px;
+    overflow-y: scroll;
+    border: solid 1px gray;
+    border-radius: 10px;
+    width: 85%;
+}
+
+#news_display p {
+    padding: 5px 10px;
+}
+
+/* couse */
+.top_couse {
+    width: 70%;
+}
+
+.top_couse_li {
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.top_couse_price {
+    text-align: end;
+}
+
+/* reserve */
+/* ======= */
+/* form */
+.form_cotainer {
+    margin: 50px 200px;
+}
+
+.form_cotainer h2 {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.reserve_items {
+    margin-bottom: 50px;
+}
+
+.reserve_items_p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form_select {
+    font-size: 17px;
+    width: 200px;
+}
+
+.form_submit {
+    text-align: right;
+    margin: 50px 100px 50px 0;
+}
+
+.form_submit_btn {
+    font-size: 16px;
+    padding: 6px;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 141px;
+}
+
+.form_back_btn {
+    border: solid 1px black;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px 6px;
+    margin-right: 20px;
+    color: black;
+}
+
+/* confirm */
+.reserve_confirm_items {
+    margin-bottom: 50px;
+    margin-left: 20px;
+}
+
+.reserve_confirm_item {
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.reserve_confirm_btn {
+    text-align: right;
+}
+
+.reserve_confirm_back {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    margin-right: 20px;
+}
+
+input.reserve_confirm_submit {
+    border: solid 1px black;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 5px;
+    width: 134px;
+    background-color: white;
+}
+
+/* complete */
+.reserve_complete_contents {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.reserve_complete_btn {
+    margin-top: 100px;
+}
+
+.reserve_complete_top_btn {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
+
+/* member */
+/* ======= */
+.regist_form_login {
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+.error_msg {
+    color: red;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+/* footer */
+/* ====== */
+footer {
+    border-top: solid 1px gray;
+    margin-top: 50px;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
