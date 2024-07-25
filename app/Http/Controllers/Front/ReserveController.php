@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReserveController extends Controller
 {
@@ -12,9 +14,15 @@ class ReserveController extends Controller
      *
      * @return view 予約画面表示
      */
-    public function showReserveForm()
+    public function showReserveForm(Request $request)
     {
-        return view('front.reserve.form');
+        // 予約画面を表示する前に、セッションに遷移先の情報を保存
+        $request->session()->put('redirect_to_reserve', true);
+        if (Auth::guard('members')->check()) {
+            return view('front.reserve.form');
+        } else {
+            return view('auth.login');
+        }    
     }
 
     /**

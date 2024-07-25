@@ -17,7 +17,7 @@
             <form action="{{ route('member_confirm') }}" method="post">
                 @csrf
                 <div class="regist_form_login">
-                    <h3>すでに会員登録済みの方は<a href="">こちら</a></h3>
+                    <h3>すでに会員登録済みの方は<a href="{{ route('login') }}">こちら</a></h3>
                 </div>
                 <h2>会員登録</h2>
                 <div class="reserve_items">

@@ -42,12 +42,13 @@ header {
 
 .fa-calendar {
     font-size: 30px;
-    margin: 35px 50px;
+    margin-right: 50px;
     color: black;
 }
 
 .fa-phone-flip {
     font-size: 23px;
+    margin-right: 50px;
     color: black;
 }
 
@@ -55,6 +56,18 @@ header {
     font-size: 23px;
     margin-right: 50px;
     color: black;
+}
+
+.fa-door-open {
+    font-size: 23px;
+    margin-right: 50px;
+    margin-left: 30px;
+    color: black;
+}
+
+.header_icon {
+    display: flex;
+    align-items: center;
 }
 
 /* front_top */
@@ -239,6 +252,65 @@ input.reserve_confirm_submit {
     color: red;
     font-size: 15px;
     margin-top: 10px;
+}
+
+/* login */
+/* ======= */
+.login_container {
+    width: 60%;
+    margin: 40px auto;
+}
+
+.login_title {
+    margin-top: 80px;
+    font-size: 30px;
+}
+
+.login_items {
+    margin: 50px 0;
+}
+
+.login_item {
+    margin-bottom: 30px;
+}
+
+.login_label {
+    font-size: 18px;
+}
+
+.login_input {
+    height: 25px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.login_submit_group {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login_contents {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_error {
+    color: red;
+}
+
+.login_password_reset_link {
+    margin-bottom: 20px;
+}
+
+.login_submit_btn {
+    height: 50px;
+    font-size: 17px;
+    width: 100px;
+}
+
+.login_submit_btn:hover {
+    cursor: pointer;
 }
 
 /* footer */

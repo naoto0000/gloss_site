@@ -1,31 +1,17 @@
 <?php
 
 use App\Http\Controllers\ProfileCntroller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('front.top');
-})->name('/');
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
 
 require __DIR__.'/auth.php';
 
 // ==========
 // フロント側
 // ==========
+// トップ画面表示
+Route::get('/', 'App\Http\Controllers\Front\LoginController@showTop')->name('/');
+
 // 予約システム（フロント）
 Route::get('/reserve', 'App\Http\Controllers\Front\ReserveController@showReserveForm')->name('reserve');
 Route::post('/reserve/confirm', 'App\Http\Controllers\Front\ReserveController@showReserveConfirm')->name('reserve_confirm');
@@ -38,7 +24,14 @@ Route::get('/member/back', 'App\Http\Controllers\Front\MemberController@showMemb
 Route::post('/member/store', 'App\Http\Controllers\Front\MemberController@storeMemberComplete')->name('member_store');
 Route::get('/member/complete', 'App\Http\Controllers\Front\MemberController@showMemberComplete')->name('member_complete');
 
+// 会員ログイン
+Route::get('/login', 'App\Http\Controllers\Front\LoginController@showLoginForm')->name('login');
+Route::post('/login_done', 'App\Http\Controllers\Front\LoginController@storeLogin')->name('login_done');
+Route::post('/logout', 'App\Http\Controllers\Front\LoginController@storeLogout')->name('logout');
+
 // ===========
 // 管理画面側
 // ===========
 Route::get('/admin', 'App\Http\Controllers\Admin\TopController@showTop')->name('admin_top');
+
+Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
